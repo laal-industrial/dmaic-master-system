@@ -1,0 +1,3 @@
+document.getElementById('year').textContent=new Date().getFullYear();
+const b=document.querySelector('.menubtn'),n=document.querySelector('.nav');b?.addEventListener('click',()=>n.classList.toggle('open'));document.querySelectorAll('.nav a').forEach(a=>a.addEventListener('click',()=>n.classList.remove('open')));
+const o=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');o.unobserve(e.target)}}),{threshold:.12});document.querySelectorAll('.reveal').forEach(e=>o.observe(e));
